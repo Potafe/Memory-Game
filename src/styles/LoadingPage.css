@@ -8,9 +8,8 @@ body {
     100% {transform: translateX(130px);}
 }
 
-.loadingPage {
+.loading-Page {
     display: flex;
-    flex: 1;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -20,7 +19,4 @@ body {
         animation: run 4s linear;
     }
     
-    p {
-        color: white;
-    }
 }
