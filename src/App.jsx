@@ -27,7 +27,7 @@ function App() {
         );
         const data = await response.json();
         setAllPokemon(data.results);
-        setPokemon(knuthShuffle(data.results.slice(0, 20)));
+        setPokemon(knuthShuffle(data.results.slice(0, 30)));
       } catch (error) {
         console.log("ERROR IN LOADING POKEMON DATA", error);
       } finally {
@@ -40,7 +40,7 @@ function App() {
   const reset = () => {
     setScore(0);
     setVisited([]);
-    setPokemon(knuthShuffle(allPokemon.slice(0, 20)));
+    setPokemon(knuthShuffle(allPokemon.slice(0, 30)));
   };
 
   const clicked = (pokemonCard) => {
@@ -59,7 +59,7 @@ function App() {
 
   return (
     <>
-      <div className="Main-App">
+      <div className="App">
         {isLoading ? (
           <LoadingPage />
         ) : (
