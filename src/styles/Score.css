@@ -1,0 +1,22 @@
+.scorebar {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    color: white;
+}
+
+.header {
+    font-size: 7rem;      
+}
+
+.score-holder {
+    font-size: 2rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: #00053d; 
+    border-radius: 0.75rem;
+    width: 40rem; 
+    padding: 1rem;
+    color: #ffffff
+}

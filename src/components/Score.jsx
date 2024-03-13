@@ -1,18 +1,18 @@
+import '../styles/Score.css'
+
 const Score = ({ score, hiScore }) => {
   return (
-    <div>
-      <div>
-        <h1>Memory Game</h1>
-      </div>
-      <div>
-        <div className="current-score">
-          <p>Current Score: {score}</p>
+      <div className = "scorebar">
+        <h1 className = "header">Memory Game</h1>
+        <div className = "score-holder">
+          <div className="current-score">
+            <p>Current Score: {score}</p>
+          </div>
+          <div className="hi-score">
+            <p>Highest Score: {hiScore}</p>
+          </div>
         </div>
-        <div className="hi-score">
-          <p>Highest Score: {hiScore}</p>
-        </div>
-      </div>
-    </div>
+     </div>
   );
 };
 
