@@ -8,7 +8,7 @@ body {
     100% {transform: translateX(130px);}
 }
 
-.loading-Page {
+.loading-page {
     display: flex;
     flex-direction: column;
     align-items: center;
