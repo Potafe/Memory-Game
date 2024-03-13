@@ -1,0 +1,17 @@
+body {
+    background: url("./assets/Backroung.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.loadingPage {
+    flex: 1;
+
+    img {
+        height: 150px;
+        animation: run 4s linear;
+    }
+    
+    p {
+        color: white;
+    }
+}
