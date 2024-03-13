@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 import { useEffect } from "react";
+import LoadingPage from "./LoadingPage";
+import Game from "./components/Game";
 
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -8,6 +10,7 @@ function App() {
   const [visited, setVisited] = useState([]);
   const [score, setScore] = useState(0);
   const [hiScore, setHiScore] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
   const knuthShuffle = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -28,6 +31,8 @@ function App() {
         setPokemon(knuthShuffle(data.results.slice(0, 20)));
       } catch (error) {
         console.log("ERROR IN LOADING POKEMON DATA", error);
+      } finally {
+        setIsLoading(false)
       }
     };
     fetchPokemonData();
@@ -40,7 +45,7 @@ function App() {
   };
 
   const clicked = (pokemonCard) => {
-    if (visited.indexOf(pokemon) === -1) {
+    if (visited.indexOf(pokemonCard) === -1) {
       setVisited((prev) => [...prev, pokemonCard]);
       setScore((prev) => prev + 1);
       setPokemon(knuthShuffle(pokemon));
@@ -55,7 +60,13 @@ function App() {
 
   return (
     <>
-      <div className="Main-App"></div>
+      <div className="Main-App">
+        {isLoading ? (
+          <LoadingPage />
+        ) : (
+          <Game pokemon = {pokemon} score = {score} hiScore = {hiScore} clicked = {clicked} />
+        )}
+      </div>
     </>
   );
 }
