@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import '../styles/Card.css'
 
 const Card = ({ data, clicked }) => {
   const [pokemonCard, setPokemonCard] = useState("");
@@ -18,12 +19,12 @@ const Card = ({ data, clicked }) => {
   }, [data]);
 
   return (
-    <div onClick={() => clicked(pokemonCard)}>
-      <div>
-        <img src={pokemonCard} alt={data.name} />
+    <div className = "card" onClick={() => clicked(pokemonCard)}>
+      <div className="image-container">
+        <img className = "image" src={pokemonCard} alt={data.name} />
       </div>
       <div className="name">
-        <p>{data.name}</p>
+        <p className="text">{data.name}</p>
       </div>
     </div>
   );
