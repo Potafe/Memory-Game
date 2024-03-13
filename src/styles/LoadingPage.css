@@ -3,10 +3,6 @@ body {
     background-size: cover;
 }
 
-@keyframes run {
-    0% {transform: translateX(-130px);}
-    100% {transform: translateX(130px);}
-}
 
 .loading-page {
     display: flex;
@@ -18,6 +14,10 @@ body {
     img {
         height: 150px;
         animation: run 4s linear;
+    }
+
+    p {
+        color: white;
     }
     
 }

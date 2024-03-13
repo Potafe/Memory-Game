@@ -5,6 +5,7 @@ const LoadingPage = () => {
     return (
         <div className='loading-page'>
             <img src = {pikachu} alt="Running Pikachu"></img>
+            <p>Loading...</p>
         </div>
     )
 }
