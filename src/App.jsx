@@ -1,7 +1,6 @@
 import { useState } from "react";
-import "./App.css";
 import { useEffect } from "react";
-import LoadingPage from "./LoadingPage";
+import LoadingPage from "./components/LoadingPage";
 import Game from "./components/Game";
 
 function App() {
