@@ -13,7 +13,7 @@ body {
     flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: centerSS;
+    justify-content: center;
 
     img {
         height: 150px;
