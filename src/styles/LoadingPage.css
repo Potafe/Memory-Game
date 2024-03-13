@@ -3,6 +3,11 @@ body {
     background-size: cover;
 }
 
+@keyframes run {
+    0% {transform: translateX(-130px);}
+    100% {transform: translateX(130px);}
+}
+
 .loadingPage {
     display: flex;
     flex: 1;
